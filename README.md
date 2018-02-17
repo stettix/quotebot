@@ -30,3 +30,9 @@ the start date. It will wrap around the list to repeat quotes as needed.
 
 Then the picked quote is tweeted. The action is idempotent so it won't post the same quote twice if run
 multiple times on the same day.
+
+## Runnng with AWS Lambda
+
+To run this from an AWS Lambda, there's a Lambda event handler class included, `QuoteBotLambda`, that
+implements the required interface. This expects the event input as a JSON array that contains the arguments
+you'd use when running it from the command line.
