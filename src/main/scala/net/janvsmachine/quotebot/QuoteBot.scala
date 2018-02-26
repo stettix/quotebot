@@ -36,7 +36,7 @@ object QuoteBot {
 
     val posted: Future[Option[Tweet]] = postedAlready.flatMap { posted =>
       if (posted) {
-        println("Posted quote already today, not tweeting")
+        println(s"Posted quote already today, not tweeting (text: $todaysQuote)")
         Future.successful(None)
       }
       else {
